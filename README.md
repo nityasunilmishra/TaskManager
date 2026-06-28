@@ -1,6 +1,6 @@
 # ⚡ Make It Happen — Todo App
 
-A clean, optimistic todo app built with **React** and **Tailwind CSS**.
+A clean, optimistic todo app built with **React** and **Tailwind CSS**, scaffolded with Vite.
 
 ---
 
@@ -13,38 +13,44 @@ A clean, optimistic todo app built with **React** and **Tailwind CSS**.
 
 ---
 
+## Project Structure
+
+```
+TASKMANAGER/
+├── node_modules/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── App.css
+│   ├── App.jsx        # TodoApp (root), TodoItem, StatCard components
+│   ├── index.css      # Tailwind directives
+│   └── main.jsx       # React DOM entry point
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package.json
+├── package-lock.json
+├── README.md
+└── vite.config.js
+```
+
+---
+
 ## Getting Started
 
+### Prerequisites
+
+- Node.js 18 or later
+- npm
+
+### Install and run
+
 ```bash
-# Create a Vite + React project
-npm create vite@latest my-todo-app -- --template react
-cd my-todo-app
 npm install
-
-# Install Tailwind CSS
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
-```
-
-Add to `tailwind.config.js`:
-
-```js
-content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-```
-
-Add to `src/index.css`:
-
-```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-```
-
-Drop `TodoApp.jsx` into `src/App.jsx`, then:
-
-```bash
 npm run dev
 ```
+
+Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ---
 
@@ -59,16 +65,7 @@ npm run dev
 
 ---
 
-## Project Structure
-
-```
-src/
-├── App.jsx       # TodoApp (root), TodoItem, StatCard components
-└── index.css     # Tailwind directives
-```
-
----
-
 ## React Concepts Used
 
 `useState` · `useEffect` · controlled inputs · immutable array updates · props · conditional rendering · list rendering with keys · derived state
+
