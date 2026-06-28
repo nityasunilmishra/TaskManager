@@ -1,16 +1,74 @@
-# React + Vite
+# ⚡ Make It Happen — Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean, optimistic todo app built with **React** and **Tailwind CSS**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech Stack
 
-## React Compiler
+- React 18 (hooks only)
+- Tailwind CSS 3
+- Vite
+- localStorage for persistence
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+# Create a Vite + React project
+npm create vite@latest my-todo-app -- --template react
+cd my-todo-app
+npm install
+
+# Install Tailwind CSS
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+```
+
+Add to `tailwind.config.js`:
+
+```js
+content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+```
+
+Add to `src/index.css`:
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+Drop `TodoApp.jsx` into `src/App.jsx`, then:
+
+```bash
+npm run dev
+```
+
+---
+
+## Features
+
+- Add tasks with a priority level (low / medium / high)
+- Complete, edit inline, and delete tasks
+- Filter by All, Active, or Done
+- Live progress bar and stats
+- Tasks saved to `localStorage` — survive page refresh
+- Confetti micro-animation on task completion
+
+---
+
+## Project Structure
+
+```
+src/
+├── App.jsx       # TodoApp (root), TodoItem, StatCard components
+└── index.css     # Tailwind directives
+```
+
+---
+
+## React Concepts Used
+
+`useState` · `useEffect` · controlled inputs · immutable array updates · props · conditional rendering · list rendering with keys · derived state
